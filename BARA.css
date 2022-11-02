@@ -1,0 +1,267 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'S-CoreDream-3Light';
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ====== popup창 ======= */
+div#popup {
+  width: 100vw;
+  height: 100%;
+  background-color: #333333d0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+div.inner_box {
+  width: 500px;
+  height: 450px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 0 #333333;
+  border-radius: 20px;
+  padding: 10px;
+  position: fixed;
+
+  /* 위에서 50 */
+  top: 50%;
+  /* 왼쪽에서 50 */
+  left: 50%;
+  /* 박스의 절반 크기만큼 x축 y축방향 밀기 */
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.inner_box img {
+  height: 100px;
+}
+
+div.inner_box a {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: #333333;
+  color: #fff;
+
+}
+
+div.today {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}
+
+div.close {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* ========= header ========= */
+header {
+  height: 50px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(165, 142, 176, 0.6);
+  padding: 0 1%;
+  z-index: 2;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+}
+
+header a {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 7px;
+  font-size: 0.8em;
+  background-color: #333333;
+  color: #fff;
+}
+
+/* ============ main ============== */
+/* banner */
+.banner {
+  display: flex;
+  position: relative;
+}
+
+.banner_img {
+  width: 100%;
+}
+
+.banner_a {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  animation: scroll 1s infinite;
+}
+
+/* ========== best point =========== */
+.bestpoint {
+  margin: 100px 0;
+}
+
+.bestpoint article,
+.besttop5 article {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 900;
+  gap: 20px;
+}
+
+article p {
+  text-align: center;
+}
+
+.detail {
+  font-size: 14px;
+}
+
+.bestpoint ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.bestpoint ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.bestpoint ul li img {
+  width: 200px;
+  height: 200px;
+}
+
+.bestpoint ul li img+p:nth-of-type(1){
+  margin: 50px 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* ============ besttop5 =============*/
+
+.besttop5 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(225, 195, 239, 0.6);
+}
+
+.besttop5 article {
+  padding: 50px 0;
+}
+
+.besttab {
+  display: flex;
+  gap: 15px;
+  padding-left: 10px;
+}
+
+.besttab li a {
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 7px;
+  font-size: 0.9em;
+  font-weight: 800;
+}
+
+.besttop5 .minititle {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 900;
+  padding-left: 10px;
+}
+
+.minititle::after {
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  margin: 8px 5px;
+}
+
+.best_contents ul {
+  padding-left: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.best_contents ul img {
+  width: 300px;
+  height: 430px;
+}
+
+/* ============ faq ============== */
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq .title {
+  font-size: 30px;
+  font-weight: 900;
+  margin: 80px 0;
+}
+
+/* ============ footer ============== */
+body footer {
+  width: 100vw;
+  background-color: silver;
+  padding: 30px 5% 80px 5%;
+  font-size: 14px;
+}
+
+/* =========== top button ========== */
+aside {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: blueviolet;
+  border-radius: 50%;
+  color: #fff;
+}
