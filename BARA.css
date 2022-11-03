@@ -140,7 +140,7 @@ header a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 900;
   gap: 20px;
 }
@@ -150,7 +150,7 @@ article p {
 }
 
 .detail {
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 .bestpoint ul {
@@ -172,7 +172,7 @@ article p {
   height: 200px;
 }
 
-.bestpoint ul li img+p:nth-of-type(1){
+.bestpoint ul li img+p:nth-of-type(1) {
   margin: 50px 0;
   font-size: 20px;
   font-weight: 900;
@@ -181,34 +181,36 @@ article p {
 /* ============ besttop5 =============*/
 
 .besttop5 {
+  padding: 100px;
   display: flex;
   flex-direction: column;
   background-color: rgba(225, 195, 239, 0.6);
 }
 
-.besttop5 article {
-  padding: 50px 0;
-}
-
 .besttab {
   display: flex;
-  gap: 15px;
-  padding-left: 10px;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
 }
 
 .besttab li a {
-  border: 1px solid #333;
-  border-radius: 15px;
-  padding: 7px;
-  font-size: 0.9em;
+  border: 1px solid #4F355B;
+  border-radius: 20px;
+  padding: 10px;
   font-weight: 800;
+}
+
+.besttab .selected {
+  background-color: #4F355B;
+  color: #fff;
 }
 
 .besttop5 .minititle {
   margin-top: 30px;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 900;
-  padding-left: 10px;
+  padding: 20px;
 }
 
 .minititle::after {
@@ -220,15 +222,27 @@ article p {
   margin: 8px 5px;
 }
 
+
+.best_contents>div {
+  display: none;
+}
+
 .best_contents ul {
-  padding-left: 20px;
-  display: flex;
+  padding-left: 30px;
   gap: 20px;
+  display: flex;
+  overflow-x: scroll ;
+}
+
+.best_contents ul li {
+  width: 100%;
 }
 
 .best_contents ul img {
-  width: 300px;
-  height: 430px;
+  /* float: left; */
+  width: 200px;
+  height: 250px;
+  /* padding-left: 10px; */
 }
 
 /* ============ faq ============== */
@@ -239,16 +253,50 @@ article p {
 }
 
 .faq .title {
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 900;
   margin: 80px 0;
 }
 
+.faq ul li {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 800px;
+  background-color: rgba(225, 195, 239, 0.6);
+}
+
+.faq .detailall {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.faq .detailall .detail {
+  font-weight: 900;
+  display: block;
+}
+
+.faq .answer::before {
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  margin: 20px 0;
+}
+
+.faq ul li .answer {
+  margin-top: 20px;
+}
+
 /* ============ footer ============== */
 body footer {
-  width: 100vw;
+  width: 100%;
   background-color: silver;
-  padding: 30px 5% 80px 5%;
+  margin-top: 100px;
+  padding: 10px 5% 50px 0;
   font-size: 14px;
 }
 
@@ -257,11 +305,12 @@ aside {
   position: fixed;
   right: 2%;
   bottom: 2%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   text-align: center;
-  line-height: 50px;
-  background-color: blueviolet;
+  line-height: 60px;
+  background-color: #4F355B;
   border-radius: 50%;
   color: #fff;
+  font-weight: 900;
 }
