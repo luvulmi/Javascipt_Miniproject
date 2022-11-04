@@ -45,9 +45,11 @@ function Btn_click(e) {
 
 // 첫번째 내용 보이기
 content1.style.display = "block";
-
 // 클릭 이벤트
 besttab.addEventListener('click', Btn_click);
-// besttab.addEventListener('click', function (e) {
-//   Btn_click(e);
-// })
+
+// =========== Accodion ============
+const faq = document.querySelector('.faq'),
+  detailall = faq.querySelectorAll('.detailall');
+
+
